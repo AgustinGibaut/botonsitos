@@ -1,0 +1,208 @@
+     /* ===== RESET ===== */
+     
+     * {
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+     }
+     
+     body {
+         font-family: 'Arial', sans-serif;
+         background-color: #fff;
+         color: #111;
+         display: flex;
+         flex-direction: column;
+         min-height: 100vh;
+     }
+     /* ===== HEADER / NAV ===== */
+     
+     header {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         padding: 2rem 1rem;
+         background-color: #f9f9f9;
+         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+     }
+     
+     header h1 {
+         font-size: 2.2rem;
+         margin-bottom: 0.5rem;
+         color: #222;
+     }
+     
+     header p {
+         font-size: 1rem;
+         color: #555;
+         max-width: 700px;
+         text-align: center;
+         line-height: 1.5;
+     }
+     
+     nav {
+         margin-top: 1.5rem;
+     }
+     
+     nav ul {
+         list-style: none;
+         display: flex;
+         gap: 2rem;
+         justify-content: center;
+     }
+     
+     nav ul li a {
+         text-decoration: none;
+         color: #222;
+         font-weight: 600;
+         padding: 0.5rem 1rem;
+         border-radius: 5px;
+         transition: background 0.3s, color 0.3s;
+     }
+     
+     nav ul li a:hover {
+         background-color: #222;
+         color: #fff;
+     }
+     /* ===== MAIN ===== */
+     
+     main {
+         flex: 1;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         padding: 2rem 1rem;
+         gap: 4rem;
+         width: 100%;
+         max-width: 1200px;
+         margin: 0 auto;
+     }
+     
+     section {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: center;
+         align-items: flex-start;
+         gap: 2rem;
+         width: 100%;
+     }
+     /* ===== LEFT SIDE ===== */
+     
+     .installation-left {
+         flex: 1;
+         min-width: 300px;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         gap: 1.5rem;
+     }
+     
+     .installation-left p {
+         font-size: 1.1rem;
+         line-height: 1.6;
+         color: #333;
+     }
+     
+     .typing-container {
+         font-family: monospace;
+         font-size: 1.1rem;
+         color: #222;
+         border-right: 2px solid #222;
+         white-space: nowrap;
+         overflow: hidden;
+     }
+     
+     @keyframes typing {
+         from {
+             width: 0;
+         }
+         to {
+             width: 100%;
+         }
+     }
+     
+     @keyframes blink {
+         0%,
+         50%,
+         100% {
+             border-color: #222;
+         }
+         25%,
+         75% {
+             border-color: transparent;
+         }
+     }
+     
+     .typing {
+         display: inline-block;
+         animation: typing 3s steps(40, end), blink 0.75s step-end infinite;
+         overflow: hidden;
+     }
+     /* ===== RIGHT SIDE ===== */
+     
+     .installation-right {
+         flex: 1;
+         min-width: 300px;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         gap: 2rem;
+     }
+     
+     .buttons-container {
+         display: flex;
+         flex-wrap: wrap;
+         gap: 1rem;
+         justify-content: center;
+     }
+     
+     .buttons-container button {
+         transition: transform 0.2s, box-shadow 0.3s;
+     }
+     
+     .buttons-container button:hover {
+         transform: scale(1.05);
+         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+     }
+     
+     .example-code {
+         width: 100%;
+     }
+     
+     .example-code h3 {
+         text-align: left;
+         margin-bottom: 1rem;
+         font-size: 1.5rem;
+     }
+     
+     .example-code code {
+         display: block;
+         background: #f0f0f0;
+         padding: 1rem;
+         border-radius: 5px;
+         font-family: monospace;
+         white-space: pre-wrap;
+     }
+     
+     footer {
+         text-align: center;
+         font-size: 0.9rem;
+         color: #777;
+         padding: 1.5rem;
+         background-color: #f9f9f9;
+         margin-top: auto;
+         box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.05);
+     }
+     
+     @media (max-width: 768px) {
+         section {
+             flex-direction: column;
+             align-items: center;
+         }
+         .example-code h3 {
+             text-align: center;
+         }
+         nav ul {
+             flex-direction: column;
+             gap: 1rem;
+         }
+     }
